@@ -1,0 +1,135 @@
+form {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  margin-top: 1em;
+}
+
+input,
+button {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+button {
+  width: fit-content;
+}
+
+span {
+  height: fit-content;
+}
+
+#todos-list {
+  width: 80%;
+  margin: auto;
+  list-style: none;
+}
+
+.todo {
+  font-size: 2em;
+}
+
+.todo-span {
+  display: flex;
+  flex-flow: row;
+}
+
+.toggle-done {
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+svg#rocket {
+  width: 80px;
+  position: absolute;
+  left: 450px;
+  top: -24px;
+  opacity: 0.7;
+  transform: rotate(20deg);
+}
+
+svg#rocket-smoke {
+  height: calc(100vh - 95px);
+  position: absolute;
+  top: 10px;
+  right: 24em;
+  z-index: -10;
+}
+
+h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }

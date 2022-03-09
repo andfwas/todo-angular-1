@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-angular-1';
+  title = 'Angular Todo';
+  public todo = {
+    id: '',
+    done: false,
+    content: ''
+  };
+  public todos: Object[] = [];
+
+  public onSubmit(e: Event): void {
+    e.preventDefault()
+    console.log(e)
+  }
 }
