@@ -7,15 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Todo';
-  public todo = {
-    id: '',
-    done: false,
-    content: ''
-  };
-  public todos: Object[] = [];
+
+  todo = ''
+
+  todos: string[] = []
+
+  updateTodo(content: string) {
+    this.todo = content
+    console.log('this todo', this.todo)
+  }
 
   public onSubmit(e: Event): void {
     e.preventDefault()
-    console.log(e)
+    // console.log(e)
   }
 }

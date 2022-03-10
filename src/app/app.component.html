@@ -142,14 +142,14 @@
 
   <!--New Todo Form-->
   <form (submit)="onSubmit($event)">
-    <input type="text" name="new-todo-input" id="new-todo-input">
+    <input (keydown)="updateTodo(todo)" type="text" name="new-todo-input" id="new-todo-input" [value]="todo">
     <button>Add Todo</button>
   </form>
 
   <!--Todos List-->
   <ul id="todos-list">
     <div ngFor="todo in todos" class="todo-span">
-      <input type="checkbox" class="toggle-done" [checked]="todo.done">
+      <input type="checkbox" class="toggle-done">
       <li class="todo">Learn Angular</li>
     </div>
   </ul>
